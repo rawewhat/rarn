@@ -1,12 +1,9 @@
 /**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
+ * Ra React Native Boilerplate
+ * https://github.com/rawewhat/rarn
  */
 
-import React from 'react';
+import React from 'react'
 import {
   SafeAreaView,
   StyleSheet,
@@ -14,7 +11,7 @@ import {
   View,
   Text,
   StatusBar,
-} from 'react-native';
+} from 'react-native'
 
 import {
   Header,
@@ -22,9 +19,9 @@ import {
   Colors,
   DebugInstructions,
   ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+} from 'react-native/Libraries/NewAppScreen'
 
-const App: () => React$Node = () => {
+const MainScreen = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
@@ -69,8 +66,8 @@ const App: () => React$Node = () => {
         </ScrollView>
       </SafeAreaView>
     </>
-  );
-};
+  )
+}
 
 const styles = StyleSheet.create({
   scrollView: {
@@ -109,6 +106,6 @@ const styles = StyleSheet.create({
     paddingRight: 12,
     textAlign: 'right',
   },
-});
+})
 
-export default App;
+export default MainScreen
