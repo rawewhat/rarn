@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "android": "react-native run-android",
+    "run.android": "react-native start & guake -n $PWD -e 'yarn android'",
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
@@ -11,9 +12,11 @@
     "lint": "eslint --ext .js,.jsx src/"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.3.4",
     "react": "16.11.0",
     "react-native": "0.62.2",
-    "react-native-navigation": "^6.4.0"
+    "react-native-navigation": "^6.4.0",
+    "react-redux": "^7.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
