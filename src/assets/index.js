@@ -1,8 +1,9 @@
 /*
   ========== Asset Module ==========
-  use this to export any asset files.
-  such as jpg, png, svg etc...
+  use this to export asset files.
+  Example usage:
+  <Svg.Sample width={24} height={24} />
  */
-export * from './img'
-export * from './raw'
-export * from './svg'
+export { default as Img } from './img'
+export { default as Raw } from './raw'
+export { default as Svg } from './svg'

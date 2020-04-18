@@ -2,6 +2,7 @@ import React from 'react'
 import { Button, Text, View, ActivityIndicator } from 'react-native'
 import { useDispatch, useSelector } from 'react-redux'
 
+import { Svg } from 'src/assets'
 import { SCREEN } from 'src/resources/constants'
 import { navigate } from 'src/services/helpers/navigationHelper'
 import { loginUser, selectAuthToken } from 'src/services/slices/authSlice'
@@ -15,6 +16,7 @@ const SampleScreen = ({ componentId }) => {
   console.log('SampleScreen', sample, loading, token)
   return (
     <View>
+      <Svg.Money width={32} height={32} />
       <Text>{sample}</Text>
       {loading === 'pending' && <ActivityIndicator />}
       {token && <Text>{token}</Text>}
