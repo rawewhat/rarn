@@ -3,7 +3,8 @@
   Redux store for global state management.
  */
 import { configureStore } from '@reduxjs/toolkit'
-import reducer from './reducers'
+
+import reducer from './slices'
 
 export default configureStore({
   reducer,

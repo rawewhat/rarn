@@ -1,17 +1,14 @@
 import { Navigation } from 'react-native-navigation'
 
-import { ROOT } from './resources'
+import { ROOT_SCREEN } from './resources/configs'
 import { screens } from './screens'
-import { registerComponents } from './services'
+import {
+  registerComponents,
+  setRoot,
+} from './services/helpers/navigationHelper'
 
 registerComponents(screens)
 
 Navigation.events().registerAppLaunchedListener(async () => {
-  await Navigation.setRoot({
-    root: {
-      component: {
-        name: `screen.${ROOT}`,
-      },
-    },
-  })
+  await setRoot(ROOT_SCREEN)
 })

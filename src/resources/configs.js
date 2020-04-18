@@ -6,4 +6,4 @@
  */
 import { SCREEN } from './constants'
 
-export const ROOT = SCREEN.SAMPLE
+export const ROOT_SCREEN = SCREEN.SAMPLE
