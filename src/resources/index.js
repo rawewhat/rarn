@@ -1,8 +1,7 @@
 /*
-  ========== Resource Module ==========
-  use this to export any resource related code.
+  ========== Config Module ==========
+  use this to export resource module
  */
 export * from './arrays'
-export * from './colors'
 export * from './configs'
 export * from './constants'

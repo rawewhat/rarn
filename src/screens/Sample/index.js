@@ -1,12 +1,14 @@
 import React from 'react'
-import { Button, Text, View, ActivityIndicator } from 'react-native'
+import { Button, Text, ActivityIndicator } from 'react-native'
 import { useDispatch, useSelector } from 'react-redux'
+
+import { Card, Layout } from 'src/elements'
 
 import { Svg } from 'src/assets'
 import { SCREEN } from 'src/resources/constants'
-import { navigate } from 'src/services/helpers/navigationHelper'
+import { navigate } from 'src/services/helpers'
 import { loginUser, selectAuthToken } from 'src/services/slices/authSlice'
-import { updateSample, selectSampleText } from 'src/services/slices/sampleSlice'
+import { selectSampleText, updateSample } from 'src/services/slices/sampleSlice'
 import { formatAmount } from 'src/services/utils'
 
 const SampleScreen = ({ componentId }) => {
@@ -15,19 +17,21 @@ const SampleScreen = ({ componentId }) => {
   const { loading, token } = useSelector(selectAuthToken)
   console.log('SampleScreen', sample, loading, token)
   return (
-    <View>
+    <Layout>
       <Svg.Money width={32} height={32} />
-      <Text>{sample}</Text>
-      {loading === 'pending' && <ActivityIndicator />}
-      {token && <Text>{token}</Text>}
-      <Text>{formatAmount(14)}</Text>
+      <Card>
+        <Text>{sample}</Text>
+        {loading === 'pending' && <ActivityIndicator />}
+        {token && <Text>{token}</Text>}
+        <Text>{formatAmount(14)}</Text>
+      </Card>
       <Button title="Change" onPress={() => dispatch(updateSample('love'))} />
       <Button
         title="Go to MainScreen"
         onPress={() => navigate(componentId, SCREEN.MAIN)}
       />
       <Button title="Login" onPress={() => dispatch(loginUser('1'))} />
-    </View>
+    </Layout>
   )
 }
 

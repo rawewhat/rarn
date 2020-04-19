@@ -1,11 +1,12 @@
 import React from 'react'
-import { View } from 'react-native'
+
+import { Layout } from 'src/elements'
 
 const TestScreen = ({ componentId }) => {
   return (
-    <View>
+    <Layout>
       <></>
-    </View>
+    </Layout>
   )
 }
 

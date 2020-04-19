@@ -5,6 +5,22 @@
   EX:
   const array = ['one', 'two', 'three']
  */
+
+export const CURRENCIES = [
+  {
+    label: '',
+    value: null,
+  },
+  {
+    label: 'Dollar ($)',
+    value: 'USD',
+  },
+  {
+    label: 'Riel (៛)',
+    value: 'KHR',
+  },
+]
+
 export const GENDERS = [
   {
     label: '',

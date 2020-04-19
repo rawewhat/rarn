@@ -1,1 +1,1 @@
-require('rarn/src')
+import('./src')
