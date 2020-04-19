@@ -1,7 +1,5 @@
 # RaRN: Ra React Native boilerplate.
 
----
-
 ## Feature
 
 - Native screen navigation performance  
